@@ -1,24 +1,28 @@
 import React from 'react';
 import SignUp from './SignUpPage';
-import { StyleSheet, Text, View, TouchableOpacity, TextInput} from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, TextInput, Image} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 export default function LoginPage({navigation}) {
   return (
    <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.text}>Login Page</Text>
+        <Image source={require('../../assets/login.png')} style={{width: 100, height: 100}} />
+        <Text style={{color: 'black', marginTop: 5, fontSize: 30, fontFamily: 'Lucida Console', fontWeight: 'bold'}}>Login Page</Text>
+        <Text style={{color: 'black', marginTop: 5, fontSize: 15, fontFamily: 'Lucida Console', color: 'gray',textAlign: 'center', width:200}} numberOfLines={2}>Please login into your account to continue</Text>
       </View>
       <View style={styles.body}>
+
+
         <Text style={styles.text}>Body</Text>
 
         <View style={{alignSelf: 'flex-start', marginLeft: 40}}>
-          <Text style={{color: 'black', marginTop: 5, fontSize: 15}}>E-mail</Text>
+          <Text style={{color: 'black', marginTop: 5, fontSize: 15, fontFamily: 'Lucida Console'}}>E-mail</Text>
         </View>
         <TextInput style={[styles.textInput, {color: 'black'}]} placeholder="Enter your Email"/>
 
         <View style={{alignSelf: 'flex-start', marginLeft: 40}}>
-          <Text style={{color: 'black', marginTop: 5, fontSize: 15}}>Password</Text>
+          <Text style={{color: 'black', marginTop: 5, fontSize: 15, fontFamily: 'Lucida Console'}}>Password</Text>
         </View>
         <TextInput style={[styles.textInput, {color: 'black'}]} placeholder="Enter your Password" secureTextEntry />
 
@@ -32,6 +36,8 @@ export default function LoginPage({navigation}) {
         </TouchableOpacity>
         
       </View>
+
+
       <View style={styles.footer}>
         <Text style={styles.text}>Footer</Text>
       </View>
@@ -42,7 +48,7 @@ export default function LoginPage({navigation}) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#2f4f4f',
+    backgroundColor: 'rgb(240, 243, 242)',
   },
  
   header: {
@@ -69,7 +75,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
   },
   text: {
-    color: '#dfecec',
+    color: 'black',
     fontSize: 15,
     fontFamily: 'Roboto Bold',
   },
@@ -87,7 +93,7 @@ const styles = StyleSheet.create({
   },
   signUpText: {
     backgroundColor: 'rgba(255, 255, 255, 0.2)',
-    color: '#dfecec',
+    color: 'rgb(27, 11, 250)',
     fontSize: 15,
     fontFamily: 'Roboto Bold',
   },
