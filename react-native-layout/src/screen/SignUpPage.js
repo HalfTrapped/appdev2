@@ -1,32 +1,22 @@
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import React from 'react';
-import SignUp from './SignUpPage';
-import { StyleSheet, Text, View, TouchableOpacity, Button} from 'react-native';
+import LoginPage  from './LoginPage';
 import { useNavigation } from '@react-navigation/native';
 
-export default function LoginPage({navigation}) {
+export default function SignUp({navigation}) {
   return (
-   <View style={styles.container}>
-      <View style={styles.header}>
-        <Text style={styles.text}>Login Page</Text>
-      </View>
-      <View style={styles.body}>
-        <Text style={styles.text}>Body</Text>
-        <TouchableOpacity>
-          <Text style={styles.loginButton}>Email</Text>
-        </TouchableOpacity>
-        <TouchableOpacity>
-          <Text style={styles.loginButton}>Password</Text>
-        </TouchableOpacity>
+    <View style={styles.container}>
+      <Text>Sign Up Page</Text>
+      <View>
         <TouchableOpacity>
           <Text style={styles.text}>Already have an account?
-            <Text style={styles.signUpText} onPress={() => navigation.navigate('SignUp')}> Sign Up</Text>
+            <Text style={styles.signUpText} onPress={() => navigation.navigate('Login')}> Log In</Text>
           </Text>
         </TouchableOpacity>
       </View>
-      <View style={styles.footer}>
-        <Text style={styles.text}>Footer</Text>
-      </View>
     </View>
+    
   );
 }
 
@@ -72,11 +62,5 @@ const styles = StyleSheet.create({
     marginBottom: 16,
     borderColor: '#dfecec',
     borderWidth: 1,
-  },
-  signUpText: {
-    backgroundColor: 'rgba(255, 255, 255, 0.2)',
-    color: '#dfecec',
-    fontSize: 15,
-    fontFamily: 'Roboto Bold',
   },
 }); 
