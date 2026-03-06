@@ -7,7 +7,7 @@ export default function SignUpPage({navigation}) {
   return (
    <View style={styles.container}>
       <View style={styles.header}>
-        <Image source={require('../../assets/login.png')} style={{width: 100, height: 100}} />
+        <Image source={require('../../assets/login.png')} style={{width: 100, height: 100, marginTop:10}} />
         <Text style={{color: 'black', marginTop: 5, fontSize: 30, fontFamily: 'Lucida Console', fontWeight: 'bold'}}>Sign Page</Text>
         <Text style={{color: 'black', marginTop: 5, fontSize: 15, fontFamily: 'Lucida Console', color: 'gray',textAlign: 'center', width:200}} numberOfLines={2}>Please create an account to continue</Text>
       </View>
@@ -41,7 +41,7 @@ export default function SignUpPage({navigation}) {
 
       <View style={styles.footer}>
         <TouchableOpacity>
-          <Text style={styles.text}>Already have an account?
+          <Text style={[styles.text, {marginTop: 50}]}>Already have an account?
             <Text style={styles.signUpText} onPress={() => navigation.navigate('Login')}> Login</Text>
           </Text>
         </TouchableOpacity>
@@ -57,21 +57,21 @@ const styles = StyleSheet.create({
   },
  
   header: {
-    flex: 1,
+    flex: 1.2,
     alignItems: 'center',
     justifyContent: 'flex-end',
     marginBottom: 16, 
   },
   body: {
-    flex: 2,
+    flex: 1.75,
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: 15,
   },
   footer: {
-    flex: 1.1,
+    flex: 1,
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
   },
   text: {
     color: 'black',
