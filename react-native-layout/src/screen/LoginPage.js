@@ -13,9 +13,6 @@ export default function LoginPage({navigation}) {
       </View>
       <View style={styles.body}>
 
-
-        <Text style={styles.text}>Body</Text>
-
         <View style={{alignSelf: 'flex-start', marginLeft: 40}}>
           <Text style={{color: 'black', marginTop: 5, fontSize: 15, fontFamily: 'Lucida Console'}}>E-mail</Text>
         </View>
@@ -29,17 +26,20 @@ export default function LoginPage({navigation}) {
         <TouchableOpacity>
           <Text style={[styles.loginButton, {color: 'white'}]}>Log In Button</Text>
         </TouchableOpacity> 
-        <TouchableOpacity>
-          <Text style={styles.text}>Already have an account?
-            <Text style={styles.signUpText} onPress={() => navigation.navigate('SignUp')}> Sign Up</Text>
-          </Text>
-        </TouchableOpacity>
+
+        <View style={{flexDirection: 'row', justifyContent: 'space-between', width: '80%', marginTop: 10}}>  
+          <Text style={{color: 'black', marginTop:0, fontSize: 12, fontFamily: 'Lucida Console', color: 'gray'}}>Forgot your password?</Text>
+          <Text style={{color: 'black', marginTop:0, fontSize: 12, fontFamily: 'Lucida Console', color: 'gray'}}>Remember me</Text>
+        </View>
         
       </View>
 
-
       <View style={styles.footer}>
-        <Text style={styles.text}>Footer</Text>
+        <TouchableOpacity>
+          <Text style={styles.text}>Don't have an account?
+            <Text style={styles.signUpText} onPress={() => navigation.navigate('SignUp')}> Sign Up</Text>
+          </Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -52,27 +52,21 @@ const styles = StyleSheet.create({
   },
  
   header: {
-    flex: 1,
+    flex: 1.50,
     alignItems: 'center',
     justifyContent: 'flex-end',
     marginBottom: 16, 
-    borderColor: 'blue',
-    borderWidth: 1,
   },
   body: {
     flex: 1.75,
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: 15,
-    borderColor: '#dfecec',
-    borderWidth: 1,
   },
   footer: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'flex-start',
-    borderColor: 'red',
-    borderWidth: 1,
+    justifyContent: 'center',
   },
   text: {
     color: 'black',
@@ -84,7 +78,7 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: 100,
     marginHorizontal: 20,
-    marginBottom: 16,
+    marginBottom: 0.5,
     borderColor: 'rgb(197, 199, 209)',
     borderWidth: 1.5,
     borderRadius: 15,
