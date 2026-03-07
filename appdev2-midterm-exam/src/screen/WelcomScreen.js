@@ -19,7 +19,7 @@ export default function WelcomeScreen() {
       {/* 3. Bottom Section */}
       <View style={styles.bottomSection}>
         <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}></Text>
+          <Text style={styles.buttonText}>Sign Up</Text>
         </TouchableOpacity>
 
         <View style={styles.loginContainer}>
@@ -60,4 +60,23 @@ const styles = StyleSheet.create({
         height: '100%',
         resizeMode: 'contain',  
     },
+    bottomSection: {
+        flex: 1.5,
+        justifyContent: 'center',
+        alignItems: 'center',
+        paddingBottom: 40,
+      },
+      button: {
+        backgroundColor: '#ffcc00',
+        width: '100%',
+        paddingVertical: 18,
+        borderRadius: 15,
+        marginBottom: 20,
+      },
+      buttonText: {
+        textAlign: 'center',
+        fontWeight: 'bold',
+        color: '#000000',
+        fontSize: 18,
+      },
 });
