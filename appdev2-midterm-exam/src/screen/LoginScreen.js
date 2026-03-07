@@ -102,4 +102,15 @@ const styles = StyleSheet.create({
       color: '#666',
       marginTop: 10,
     },
+    loginButton: {
+      backgroundColor: '#FFCC00',
+      borderRadius: 15,
+      padding: 18,
+      alignItems: 'center',
+      marginTop: 30,
+    },
+    loginButtonText: {
+      fontWeight: 'bold',
+      fontSize: 18,
+    },
 });
