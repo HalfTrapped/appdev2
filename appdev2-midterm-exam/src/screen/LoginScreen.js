@@ -12,13 +12,13 @@ export default function LoginScreen() {
   return (
     <View style={styles.container}>
       {/* 1. Header Section */}
+      {/* 1. Header Section */}
       <View style={styles.header}>
         <Image
-          source={require("./../../assets/login.webp")}
+          source={require("../../assets/Login.webp")}
           style={styles.image}
         />
       </View>
-
       {/* 2. Form Section */}
       <View style={styles.formContainer}>
         <Text style={styles.label}></Text>
@@ -67,5 +67,21 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#7D7AFF',
         paddingTop: 40,
+    },
+    header:{
+        flex: 2,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    image: {
+      width: '80%',
+      height: '70%',
+    },
+    formContainer: {
+      flex: 1,
+      backgroundColor: '#FFF',
+      borderTopLeftRadius: 60,
+      borderTopRightRadius: 60,
+      padding:30,
     },
 });
