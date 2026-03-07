@@ -113,4 +113,10 @@ const styles = StyleSheet.create({
       fontWeight: 'bold',
       fontSize: 18,
     },
+    orText: {
+      textAlign: 'center',
+      marginVertical: 20,
+      fontSize: 18,
+      fontWeight: 'bold',
+    },
 });
