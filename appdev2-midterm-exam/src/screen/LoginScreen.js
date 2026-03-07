@@ -84,4 +84,22 @@ const styles = StyleSheet.create({
       borderTopRightRadius: 60,
       padding:30,
     },
+    label:{
+      fontSize: 14,
+      marginBottom: 5,
+      marginTop: 15,
+      color: '#666',
+
+    },
+    input: {
+      backgroundColor: '#F0F0F0',
+      borderRadius: 15,
+      padding: 15,
+      fontSize: 16,
+    },
+    forgotText: {
+      alignSelf: 'flex-end',
+      color: '#666',
+      marginTop: 10,
+    },
 });
