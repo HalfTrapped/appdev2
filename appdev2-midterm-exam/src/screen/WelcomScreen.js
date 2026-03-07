@@ -5,13 +5,13 @@ export default function WelcomeScreen() {
     <View style={styles.container}>
       {/* 1. Top Section */}
       <View style={styles.topSection}>
-        <Text style={styles.title}></Text>
+        <Text style={styles.title}>Let`s Get Started!</Text>
       </View>
 
       {/* 2. Middle Section */}
       <View style={styles.middleSection}>
         <Image
-          source={require("./../../assets/welcome.png")}
+          source={require("../../assets/Welcome.png")}
           style={styles.image}
         />
       </View>
@@ -39,5 +39,25 @@ const styles = StyleSheet.create({
         backgroundColor: '#7D7AFF',
         paddingTop: 80,
         paddingHorizontal: 30,
+    },
+    topSection: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    title: { 
+        fontSize: 32,
+        fontWeight: 'bold',
+        color: '#fff',
+    },
+    middleSection: {
+        flex: 3,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    image: {
+        width: '100%',
+        height: '100%',
+        resizeMode: 'contain',  
     },
 });
