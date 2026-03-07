@@ -23,9 +23,9 @@ export default function WelcomeScreen() {
         </TouchableOpacity>
 
         <View style={styles.loginContainer}>
-          <Text style={styles.footerText}></Text>
+          <Text style={styles.footerText}>Already have an account?</Text>
           <TouchableOpacity>
-            <Text style={styles.loginLink}></Text>
+            <Text style={styles.loginLink}>Log In</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -79,4 +79,18 @@ const styles = StyleSheet.create({
         color: '#000000',
         fontSize: 18,
       },
+      loginContainer:{
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+      },
+      footerText: {
+
+      },
+      loginLink: {
+        color: '#ffcc00',
+        fontWeight: 'bold',
+        fontSize: 15,
+      },
+
 });
