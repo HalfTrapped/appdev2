@@ -8,33 +8,34 @@ import {
 } from "react-native";
 import Ionicons from "@react-native-vector-icons/ionicons";
 
-export default function SignupScreen() {
+export default function LoginScreen() {
   return (
     <View style={styles.container}>
       {/* 1. Header Section */}
+      {/* 1. Header Section */}
       <View style={styles.header}>
         <Image
-          source={require("../../assets/Signup.webp")}
+          source={require("../../assets/Login.webp")}
           style={styles.image}
         />
       </View>
-
       {/* 2. Form Section */}
       <View style={styles.formContainer}>
-        <Text style={styles.label}>Full Name</Text>
-        <TextInput style={styles.input} placeholder="John Doe" />
-
         <Text style={styles.label}>Email Address</Text>
         <TextInput style={styles.input} placeholder="john@gmail.com" />
 
         <Text style={styles.label}>Password</Text>
         <TextInput style={styles.input} placeholder="********"  secureTextEntry  />
 
-        <TouchableOpacity style={styles.loginButton}>
-            <Text style={styles.loginButtonText}>Sign Up</Text>
+        <TouchableOpacity>
+          <Text style={styles.forgotText}>Forgot Password?</Text>
         </TouchableOpacity>
 
-        <Text style={styles.orText}>Or</Text>
+        <TouchableOpacity style={styles.loginButton}>
+            <Text style={styles.loginButtonText}>Login</Text>
+        </TouchableOpacity>
+
+        <Text style={styles.orText}></Text>
 
         <View style={styles.socialRow}>
           <TouchableOpacity style={styles.socialIcon}>
@@ -51,9 +52,9 @@ export default function SignupScreen() {
         </View>
 
         <View style={styles.footer}>
-          <Text>Already have an account? </Text>
+          <Text>Don't have an account? </Text>
           <TouchableOpacity>
-            <Text style={styles.linkText}>Log In</Text>
+            <Text style={styles.linkText}>Sign Up</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -68,7 +69,7 @@ const styles = StyleSheet.create({
         paddingTop: 40,
     },
     header:{
-        flex: 1,
+        flex: 2,
         alignItems: 'center',
         justifyContent: 'center',
     },
@@ -77,7 +78,7 @@ const styles = StyleSheet.create({
       height: '70%',
     },
     formContainer: {
-      flex: 3,
+      flex: 1,
       backgroundColor: '#FFF',
       borderTopLeftRadius: 60,
       borderTopRightRadius: 60,
@@ -118,7 +119,7 @@ const styles = StyleSheet.create({
       fontSize: 18,
       fontWeight: 'bold',
     },
-    socialRow: {
+    ocialRow: {
       flexDirection: 'row',
       justifyContent: 'center',
       gap: 20,
@@ -129,15 +130,12 @@ const styles = StyleSheet.create({
       padding: 15,
     },
     footer: {
-        flex:1,
-        flexDirection: 'row',
-        justifyContent: 'center',
-        marginTop: 30,
+      flexDirection: 'row',
+      justifyContent: 'center',
+      marginTop: 30,
     },
     linkText: {
       color: '#FFCC00',
       fontWeight: 'bold',
     },
-
 });
-
