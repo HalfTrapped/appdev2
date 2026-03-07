@@ -21,18 +21,17 @@ export default function LoginScreen() {
       </View>
       {/* 2. Form Section */}
       <View style={styles.formContainer}>
+        <Text style={styles.label}>Full Name</Text>
+        <TextInput style={styles.input} placeholder="John Doe" />
+
         <Text style={styles.label}>Email Address</Text>
         <TextInput style={styles.input} placeholder="john@gmail.com" />
 
         <Text style={styles.label}>Password</Text>
         <TextInput style={styles.input} placeholder="********"  secureTextEntry  />
 
-        <TouchableOpacity>
-          <Text style={styles.forgotText}>Forgot Password?</Text>
-        </TouchableOpacity>
-
         <TouchableOpacity style={styles.loginButton}>
-            <Text style={styles.loginButtonText}>Login</Text>
+            <Text style={styles.loginButtonText}>Sign Up</Text>
         </TouchableOpacity>
 
         <Text style={styles.orText}></Text>
