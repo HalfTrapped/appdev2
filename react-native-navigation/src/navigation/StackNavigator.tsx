@@ -34,9 +34,19 @@ function DetailsScreen({ route }) {
       <Button onPress={() => navigation.navigate('Home')}>
         Go to Home
       </Button>
-      <Button onPress={() => navigation.push('Details')}>
-        Go to Details...again
+      <Button
+        onPress={
+          () =>
+            navigation.push('Details', {
+              // Randomly generate an ID for demonstration purposes
+              itemId: Math.floor(Math.random() * 100),
+              otherParam: 'Updated parameter',
+            })
+        }
+      >
+        Go to Details... again
       </Button>
+
       <Button onPress={() => navigation.goBack()}>
         Go back
       </Button>
@@ -59,6 +69,7 @@ const RootStack = createNativeStackNavigator({
       screen: HomeScreen,
       options: {
         title: 'Overview',
+        initialParams: { itemId: 42 },
       },
     },
     Details: DetailsScreen,
