@@ -2,11 +2,18 @@ import * as React from 'react';
 import { View, Text } from 'react-native';
 import { createStaticNavigation, useNavigation, } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Link } from '@react-navigation/native';
 import { Button } from '@react-navigation/elements';
 
-function HomeScreen() {
+function HomeScreen({ route }) {
   const navigation = useNavigation();
+  React.useEffect(() => {
+    if (route.params?.post) {
+      alert('New post: ' + route.params?.post);
+    }
+  }, [route.params?.post]);
+
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>Home Screen</Text>
@@ -58,6 +65,32 @@ function DetailsScreen({ route }) {
   );
 }
 
+function CreatePostScreen({ route }) {
+  const navigation = useNavigation();
+  const [postText, setPostText] = React.useState('');
+
+  return (
+    <>
+      <TextInput
+        multiline
+        placeholder="What's on your mind?"
+        style={{ height: 200, padding: 10, backgroundColor: 'white' }}
+        value={postText}
+        onChangeText={setPostText}
+      />
+      <Button
+        onPress={() => {
+          // Pass params back to home screen
+          navigation.popTo('Home', { post: postText });
+        }}
+      >
+        Done
+      </Button>
+    </>
+  );
+}
+
+
 
 const RootStack = createNativeStackNavigator({
   initialRouteName: 'Home',
@@ -67,6 +100,7 @@ const RootStack = createNativeStackNavigator({
   screens: {
     Home: {
       screen: HomeScreen,
+      CreatePost: CreatePostScreen,
       options: {
         title: 'Overview',
         initialParams: { itemId: 42 },
