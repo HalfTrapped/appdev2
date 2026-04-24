@@ -38,7 +38,7 @@ const TodoScreen = () => {
         await addTodo({ text: task });
         setTask('');
     };
-      const toggleTodo = (id: Id<"todos">, currentStatus: boolean) => {
+    const toggleTodo = (id: Id<"todos">, currentStatus: boolean) => {
         toggleTodoMutation({ id, isCompleted: !currentStatus });
     };
 
@@ -52,7 +52,7 @@ const TodoScreen = () => {
             },
         ]);
     };
-return (
+    return (
         <View style={styles.container}>
             {/* 1. Header Section (Purple) */}
             <View style={styles.header}>
@@ -67,7 +67,7 @@ return (
                     />
                 </View>
             </View>
-  {/* 2. Body Section (White with Rounded Top) */}
+            {/* 2. Body Section (White with Rounded Top) */}
             <View style={styles.bodyContainer}>
                 <ScrollView showsVerticalScrollIndicator={false}>
                     {filterTodos.map(item => (
@@ -197,4 +197,3 @@ todoCompleted: {
 });
 
 export default TodoScreen;
-
